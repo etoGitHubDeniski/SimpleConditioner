@@ -1,0 +1,276 @@
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 2000px;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+a {
+    color: var(--bs-body-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--bs-blue);
+}
+
+li {
+    display: inline-block;
+}
+
+a,
+#main-nav,
+#main-nav #menu,
+#main-nav .sub-menu {
+    -ms-transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+    -moz-transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+    -webkit-transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+    transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+}
+
+/* =========================== Progress Bar =========================== */
+
+#progress {
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 0.5vh;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    background: var(--bs-blue);
+    opacity: 0.8;
+}
+
+#progress.open {
+    opacity: 0;
+}
+
+/*============================== Main Nav ============================== */
+
+#main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 44px 0;
+    font-size: 16px;
+    z-index: 10;
+    background-color: transparent;
+}
+
+#main-nav.active {
+    background-color: #fff;
+    padding: 24px 0;
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+}
+
+#main-nav ul {
+    padding: 0;
+    margin: auto;
+}
+
+#main-nav ul.left {
+    text-align: left;
+}
+
+#main-nav ul.left a {
+    font-weight: 500;
+}
+
+#main-nav ul.right {
+    text-align: right;
+}
+
+#main-nav ul li {
+    margin-right: 20px;
+}
+
+@media (min-width: 1200px) {
+    #main-nav ul li {
+        margin-right: 40px;
+    }
+}
+
+#main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+#main-nav .logo {
+    display: inline-block;
+}
+
+#main-nav .logo img {
+    width: 90%;
+}
+
+/* Main Nav - Sub Menu */
+
+
+
+/* Main Nav - Menu */
+
+#main-nav #menu {
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    text-align: center;
+    background-color: #353535;
+    z-index: -100;
+    opacity: 0;
+}
+
+#main-nav #menu.open {
+    visibility: visible;
+    z-index: 100;
+    opacity: 1;
+    
+}
+
+#main-nav #menu ul {
+    margin-top: 40px;
+}
+
+#main-nav #menu ul li {
+    display: block;
+    margin: 10px 0;
+}
+
+#main-nav #menu a {
+    color: #fff;
+}
+
+#main-nav #menu a:hover {
+    color: var(--bs-blue);
+}
+
+#main-nav #menu .menu__footer {
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 20px 40px 25px;
+}
+
+#main-nav #menu .menu__footer .more-info p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+#main-nav #menu .menu__footer .socials li {
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
+
+#main-nav #menu .menu__footer .socials li:last-child {
+    margin-right: 0;
+}
+
+#main-nav #menu #menu-close {
+    padding: 44px 0;
+    text-align: right;
+}
+
+#main-nav #menu #menu-close.active {
+    padding: 24px 0;
+}
+
+#main-nav #menu #menu-close ul {
+    margin: auto;
+}
+
+#main-nav #menu #menu-close ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+#main-nav #menu #menu-close .menu__logo {
+    display: flex;
+    justify-content: center;
+}
+
+/* ============================== Header ============================== */
+
+#main-nav .sub-menu {
+    background-color: #353535;
+    position: absolute;
+    visibility: hidden;
+    z-index: 15;
+    width: 290px;
+    padding: 20px 30px;
+    margin-top: 10px;
+    border: none;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#main-nav .sub-menu li {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 15px 0;
+    display: block;
+    position: relative;
+}
+
+#main-nav .sub-menu li:first-child {
+    padding: 15px 0
+}
+
+#main-nav .sub-menu li a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#main-nav .sub-menu li a:hover {
+    color: var(--bs-blue);
+}
+
+#main-nav ul.left li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+#main-nav .sub-menu .has-sub-menu ul {
+    margin-left: 200px;
+}
+
+#main-nav .sub-menu .has-sub-menu ul li {
+    display: block;
+}
+
+#main-nav .sub-menu .has-sub-menu a i {
+    margin-left: 10px;
+}
+
+#main-nav a i.fa-caret-down,
+#main-nav a i.fa-caret-right {
+    font-size: 10px;
+}
+
+
+
+#header {
+    height: 100vh;
+    background-color: #e2e2e2;
+}
