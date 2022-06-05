@@ -7,7 +7,6 @@ body {
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 2000px;
 }
 
 body::-webkit-scrollbar {
@@ -26,6 +25,11 @@ a:hover {
 
 li {
     display: inline-block;
+}
+
+section {
+    display: flex;
+    align-items: center;
 }
 
 a,
@@ -49,12 +53,42 @@ a,
     height: 0.5vh;
     transform-origin: 0 50%;
     transform: scaleX(0);
-    background: var(--bs-blue);
+    background: #0c70f2;
     opacity: 0.8;
 }
 
 #progress.open {
     opacity: 0;
+}
+
+/* ========================= a class="button" ========================= */
+
+a.button {
+    margin: 0;
+    color: #353535;
+    border: 1px solid #353535;
+    background-color: transparent;
+    padding: 12px 50px;
+    font-weight: 500;
+}
+
+a.button:hover {
+    color: #fff;
+    background-color: #353535;
+}
+
+a.button-white {
+    margin: 0;
+    color: #353535;
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 12px 50px;
+    font-weight: 500;
+}
+
+a.button-white:hover {
+    color: #fff;
+    background-color: transparent;
 }
 
 /*============================== Main Nav ============================== */
@@ -89,6 +123,14 @@ a,
 
 #main-nav ul.left a {
     font-weight: 500;
+    font-size: 16px;
+    padding: 24px 0;
+}
+
+@media (max-width: 992px) {
+    #main-nav ul.left a {
+        font-size: 12px;
+    }
 }
 
 #main-nav ul.right {
@@ -119,7 +161,75 @@ a,
 
 /* Main Nav - Sub Menu */
 
+#main-nav .sub-menu {
+    background-color: #353535;
+    color: #fff;
+    position: absolute;
+    visibility: hidden;
+    z-index: 15;
+    width: 290px;
+    height: 0;
+    padding: 0 30px;
+    border: none;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 24px;
+}
 
+#main-nav .sub-menu li {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 15px 0;
+    display: block;
+    position: relative;
+}
+
+#main-nav .sub-menu li a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#main-nav .sub-menu li p {
+    margin-bottom: 4px;
+}
+
+#main-nav .sub-menu li #phone {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#main-nav .sub-menu li.work-time {
+    font-size: 14px;
+}
+
+#main-nav .sub-menu li a:hover {
+    color: var(--bs-blue);
+}
+
+#main-nav ul.left li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    padding: 35px 30px 20px 30px;
+}
+
+#main-nav .sub-menu .has-sub-menu ul {
+    margin-left: 200px;
+}
+
+#main-nav .sub-menu .has-sub-menu ul li {
+    display: block;
+}
+
+#main-nav .sub-menu .has-sub-menu a i {
+    margin-left: 10px;
+}
+
+#main-nav a i.fa-caret-down,
+#main-nav a i.fa-caret-right {
+    font-size: 10px;
+}
 
 /* Main Nav - Menu */
 
@@ -152,6 +262,13 @@ a,
     display: block;
     margin: 10px 0;
 }
+
+#main-nav #menu ul.menu-links li{
+    color: #fff;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
 
 #main-nav #menu a {
     color: #fff;
@@ -211,66 +328,98 @@ a,
 
 /* ============================== Header ============================== */
 
-#main-nav .sub-menu {
-    background-color: #353535;
-    position: absolute;
-    visibility: hidden;
-    z-index: 15;
-    width: 290px;
-    padding: 20px 30px;
-    margin-top: 10px;
-    border: none;
-    overflow: hidden;
-    opacity: 0;
-}
-
-#main-nav .sub-menu li {
-    width: 100%;
-    margin: 0;
-    padding: 0 0 15px 0;
-    display: block;
-    position: relative;
-}
-
-#main-nav .sub-menu li:first-child {
-    padding: 15px 0
-}
-
-#main-nav .sub-menu li a {
-    color: #fff;
-    font-weight: 400;
-    font-size: 14px;
-}
-
-#main-nav .sub-menu li a:hover {
-    color: var(--bs-blue);
-}
-
-#main-nav ul.left li:hover .sub-menu {
-    opacity: 1;
-    visibility: visible;
-}
-
-#main-nav .sub-menu .has-sub-menu ul {
-    margin-left: 200px;
-}
-
-#main-nav .sub-menu .has-sub-menu ul li {
-    display: block;
-}
-
-#main-nav .sub-menu .has-sub-menu a i {
-    margin-left: 10px;
-}
-
-#main-nav a i.fa-caret-down,
-#main-nav a i.fa-caret-right {
-    font-size: 10px;
-}
-
-
-
 #header {
     height: 100vh;
-    background-color: #e2e2e2;
+    background-color: #fff;
+    border: 2px solid red;
+}
+
+/* ============================== Catalog ============================== */
+
+#catalog {
+    height: 100vh;
+    background-color: #fff;
+
+}
+
+/* ============================== Price ============================== */
+
+#price {
+    height: 100vh;
+    background-color: #fff;
+    outline: 2px solid red;
+}
+
+/* ============================== Calculator ============================== */
+
+#calculator {
+    height: 100vh;
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+/* ============================== Why we ============================== */
+
+#why-we {
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* ============================== Include ============================== */
+
+#include {
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* ============================== Promotion ============================== */
+
+#promotion {
+    height: 340px;
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+/* ============================== About us ============================== */
+
+#about-us {
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* ============================== Stages ============================== */
+
+#stages {
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* ============================== FAQ ============================== */
+
+#faq {
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* ============================== Questions ============================== */
+
+#questions {
+    height: 340px;
+    background-color: #353535;
+    color: #fff;
+}
+
+/* ============================== Brands ============================== */
+
+#brands {
+    height: 340px;
+    background-color: #fff;
+}
+
+/* ============================== Footer ============================== */
+
+#footer {
+    height: 250px;
+    background-color: #353535;
+    color: #fff;
 }

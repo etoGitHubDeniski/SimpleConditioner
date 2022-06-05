@@ -29,6 +29,11 @@ $(document).ready(function () {
 
 		if ($('#menu').hasClass('open')) {
 			$('.menu-close').on('click', function (e) {
+				$('#menu').removeClass('open');
+				$('#body').removeClass('open');
+				$('#progress').removeClass('open');
+			})
+			$('.menu-close-button').on('click', function (e) {
 				e.preventDefault();
 				$('#menu').removeClass('open');
 				$('#body').removeClass('open');
