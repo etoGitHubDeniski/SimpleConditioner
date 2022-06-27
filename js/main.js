@@ -1,6 +1,7 @@
 import '/js/scroll-timeline.js';
 
 $(document).ready(function () {
+
 	// Scroll Events
 	$(window).scroll(function () {
 
@@ -64,5 +65,7 @@ $(document).ready(function () {
 		),
 		myScrollTimeline
 	).play();
+
+	
 
 });

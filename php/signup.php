@@ -9,9 +9,9 @@ $passwordconf = $_POST['passwordconf'];
 
 if ($password === $passwordconf) {
 
-    $password = $password;
+    $password = md5($password);
 
-    mysqli_query($connect, "INSERT INTO `users` (`id`, `login`, `password`, `email`) VALUES (NULL, '$login', '$password', '$email')");
+    mysqli_query($connect, "INSERT INTO `Users` (`id`, `login`, `password`, `email`) VALUES (NULL, '$login', '$password', '$email')");
 
     $_SESSION['message'] = 'Регистрация прошла успешно!';
     header('Location: /views/login.php');

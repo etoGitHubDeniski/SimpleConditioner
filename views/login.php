@@ -12,11 +12,23 @@ if ($_SESSION['user']) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="/assets/icons/faviconAuthorization.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Войти</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>Вход</title>
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="/img/icons/Simple.ico">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
